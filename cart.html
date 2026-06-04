@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>о нас</title>
+    <title>044 shop</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="javascripts/scripts.js" defer></script>
     <script src="javascripts/index.js" defer></script>
@@ -13,14 +13,21 @@
   <body>
     <nav class="mainMenu">
       <a class="mainMenuLink" href="index.html">Главная</a>
-      <a href="about.html" class="mainMenuLink active">О нас</a>
+      <a href="about.html" class="mainMenuLink">О нас</a>
       <a href="assortment.html" class="mainMenuLink">Ассортимент</a>
       <a href="events.html" class="mainMenuLink">События</a>
       <a href="space.html" class="mainMenuLink">Пространство</a>
       <a href="journal.html" class="mainMenuLink">Журнал</a>
-      <a class="mainMenuLink" href="cart.html">
+      <a class="mainMenuLink active" href="cart.html">
         Корзина: <span class="productCnt">0</span>
       </a>
     </nav>
+    <section class="cart">
+      <h1>Корзина</h1>
+
+      <div class="cartList"></div>
+
+      <h2 class="totalPrice"></h2>
+    </section>
   </body>
 </html>

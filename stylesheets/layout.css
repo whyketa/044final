@@ -53,3 +53,62 @@
   height: 2px;
   background: #000;
 }
+
+.cart {
+  width: 90%;
+  margin: 2vw auto;
+  padding-bottom: 4vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.cart h1 {
+  font-size: 5vw;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.itemCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  padding: 1.5vw;
+  border-radius: 2vw;
+  background: white;
+}
+
+.itemCard img {
+  width: 10vw;
+  height: 10vw;
+  object-fit: cover;
+  border-radius: 1.5vw;
+}
+
+.cartItemText {
+  flex: 1;
+}
+
+.itemCard button {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+.emptyCart {
+  font-size: 2vw;
+}
+
+.totalPrice {
+  font-size: 2.5vw;
+}
