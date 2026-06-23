@@ -489,20 +489,23 @@ document.addEventListener("DOMContentLoaded", () => {
   animateScene();
 });
 
-//стирание формы
-const form = document.querySelector(".travel-form");
-const inputs = document.querySelectorAll(".form-input");
+//стирание формы и попуп
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".travel-form");
+  const inputs = document.querySelectorAll(".form-input");
+  const popup = document.getElementById("popup");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  form.classList.add("sent");
+    inputs.forEach((input) => {
+      input.value = "";
+    });
 
-  inputs.forEach((input) => {
-    input.value = "";
+    popup.classList.add("active");
+
+    setTimeout(() => {
+      popup.classList.remove("active");
+    }, 2500);
   });
-
-  setTimeout(() => {
-    form.classList.remove("sent");
-  }, 600);
 });

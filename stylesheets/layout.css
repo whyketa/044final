@@ -89,7 +89,7 @@ h4 {
   opacity: 0.7;
 }
 
-.mainMenuLink.active::after {
+/*.mainMenuLink.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -97,78 +97,6 @@ h4 {
   width: 100%;
   height: 2px;
   background: #000;
-}
-
-#burger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-
-#burger span {
-  width: 32px;
-  height: 2px;
-  background: #000;
-}
-
-.cart {
-  width: 90%;
-  margin: 2vw auto;
-  padding-bottom: 4vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
-}
-
-.cart h1 {
-  font-size: 5vw;
-}
-
-.cartList {
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
-}
-
-.itemCard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2vw;
-  padding: 1.5vw;
-  border-radius: 2vw;
-  background: white;
-}
-
-.itemCard img {
-  width: 10vw;
-  height: 10vw;
-  object-fit: cover;
-  border-radius: 1.5vw;
-}
-
-.cartItemText {
-  flex: 1;
-}
-
-.itemCard button {
-  width: 3vw;
-  height: 3vw;
-  border-radius: 50%;
-  border: none;
-  background: black;
-  color: white;
-  font-size: 1.5vw;
-  cursor: pointer;
-}
-
-.emptyCart {
-  font-size: 2vw;
-}
-
-.totalPrice {
-  font-size: 2.5vw;
 }
 
 /*стили главных экранов*/
@@ -890,7 +818,7 @@ h4 {
 }
 .g_trible4 {
   top: 49.65vw;
-  left: 50vw;
+  left: 30vw;
   width: 24.9vw;
   z-index: 9;
 }
@@ -1037,8 +965,9 @@ h4 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  gap: 2.91vw;
+  gap: 2.5vw;
   overflow: hidden;
+  justify-content: center;
 }
 
 /*третий экран пространства*/
@@ -1048,6 +977,7 @@ h4 {
   align-items: center;
   position: relative;
   overflow: hidden;
+  justify-content: center;
 }
 .travel-form {
   width: 79.86vw;
@@ -1089,8 +1019,8 @@ h4 {
 
 .form-input:focus {
   transform: scale(1.02);
-  border-color: #9ffcff;
-  box-shadow: 0 0 1vw rgba(159, 252, 255, 0.7);
+  border-color: #ffffff;
+  box-shadow: 0 0 1vw rgba(255, 255, 255, 0.7);
   background-color: #fff;
 }
 .travel-form.sent {
@@ -1098,4 +1028,172 @@ h4 {
 }
 .travel-form h3 {
   text-align: center;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  width: 32vw;
+  min-height: 12vw;
+  background: #2b2b2b;
+  border: 0.2vw solid #ff9bc8;
+  border-radius: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+
+.popup.active .popup-content {
+  transform: scale(1);
+}
+
+.popup-content h2 {
+  font-family: "Inter";
+  font-size: 1.8vw;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.popup-content p {
+  font-family: "Inter";
+  font-size: 1.1vw;
+  color: #ffffff;
+}
+
+/*ПОСЛЕДНЯЯ СТРАНИЦА!!! первый экран*/
+.screen_6-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 1vw;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.screen_6-1 .card {
+  width: 52.5vw;
+  height: 37vw;
+  border-radius: 0;
+}
+
+/*ПОСЛЕДНЯЯ СТРАНИЦА!!! второй экран*/
+.screen_6-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 1vw;
+  overflow: hidden;
+  justify-content: center;
+  gap: 9vw;
+}
+.informacia {
+  display: flex;
+  flex-direction: column;
+  gap: 2.7vw;
+  text-align: center;
+}
+.informacia .knopka {
+  width: fit-content;
+  align-self: center;
+}
+
+/*страница404*/
+.screen_7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.screen_7 .left-side {
+  height: 100%;
+  width: 50%;
+}
+.screen_7 .right-side {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+  align-items: center;
+}
+.screen_7 .logos-mini {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21vw;
+  height: 8.88vw;
+  background-image: url("../images/logo.svg");
+  display: flex;
+  justify-content: center;
+  margin-top: 4vw;
+  margin-right: -8vw;
+}
+.screen_7 .kot {
+  width: 59vw;
+  height: 74.65vw;
+  transform: rotate(12deg);
+  z-index: 2;
+}
+.screen_7 h1 {
+  font-size: 15vw;
+}
+.g_trible5 {
+  top: -9.75vw;
+  left: -8vw;
+  width: 42.84vw;
+  transform: rotate(-200deg);
+}
+.g_trible6 {
+  top: -15.3vw;
+  left: 35.55vw;
+  width: 32.98vw;
+  transform: rotate(50deg);
+}
+.g_trible7 {
+  top: 35vw;
+  left: 60vw;
+  width: 42.84vw;
+}
+.g_trible8 {
+  top: 8vw;
+  left: 69vw;
+  width: 42.84vw;
+  transform: rotate(95deg);
+}
+.g_trible9 {
+  top: 20vw;
+  left: 28vw;
+  width: 42.84vw;
+  transform: rotate(-40deg);
+}
+.screen_7 .knopka {
+  width: fit-content;
+  align-self: flex-start;
+  padding: 1.38vw 5vw;
+  align-self: flex-start;
+  align-self: center;
 }
