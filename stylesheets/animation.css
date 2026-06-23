@@ -1,3 +1,4 @@
+/* движение градиента*/
 @keyframes gradient {
   0% {
     background-position: 80% 0%;
@@ -8,4 +9,84 @@
   100% {
     background-position: 80% 0%;
   }
+}
+
+/* картинки паралакс*/
+.moving {
+  position: absolute;
+  transition: transform 0.1s ease-out;
+  width: 2vw;
+  height: auto;
+  z-index: 1;
+}
+
+#img1 {
+  top: 20%;
+  left: 67%;
+  width: 16.87vw;
+  z-index: 3;
+}
+#img2 {
+  top: 45%;
+  left: 7%;
+  width: 26.7vw;
+}
+#img3 {
+  top: 5%;
+  left: 71%;
+  width: 30vw;
+  z-index: 3;
+}
+#img4 {
+  top: 13%;
+  left: 10%;
+  width: 25.35vw;
+  z-index: 0;
+}
+#img5 {
+  top: 47%;
+  left: 71%;
+  width: 18.9vw;
+  z-index: 3;
+}
+#img6 {
+  top: 47%;
+  left: 71%;
+  width: 17.57vw;
+  z-index: 3;
+}
+#img7 {
+  top: 20%;
+  left: 65%;
+  width: 32.29vw;
+  z-index: 0;
+}
+#img8 {
+  top: 60%;
+  left: 65%;
+  width: 29.58vw;
+  z-index: 3;
+}
+
+/*анимация трайблов на фоне*/
+.bg-float {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+
+  --x: 0px;
+  --y: 0px;
+  --base-rotate: 0deg;
+  --float-rotate: 0deg;
+
+  transform: translate(var(--x), var(--y))
+    rotate(calc(var(--base-rotate) + var(--float-rotate)));
+
+  transition: transform 3.5s ease-in-out;
+  will-change: transform;
+}
+
+.bg-float.is-escaping {
+  transition: transform 14s ease-in-out;
 }

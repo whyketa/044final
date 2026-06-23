@@ -1,26 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>044 shop</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ef13eaa8-30f4-4655-86fc-360d2c478df4&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <script src="javascripts/scripts.js" defer></script>
     <script src="javascripts/index.js" defer></script>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
   <body>
-    <nav class="mainMenu">
-      <a class="mainMenuLink active" href="index.html">Главная</a>
-      <a href="about.html" class="mainMenuLink">О нас</a>
-      <a href="assortment.html" class="mainMenuLink">Ассортимент</a>
-      <a href="events.html" class="mainMenuLink">События</a>
-      <a href="space.html" class="mainMenuLink">Пространство</a>
-      <a href="journal.html" class="mainMenuLink">Журнал</a>
-      <a class="mainMenuLink" href="cart.html">
-        Корзина: <span class="productCnt">0</span>
-      </a>
-    </nav>
+    <section class="main">
+      <nav class="mainMenu">
+        <a class="mainMenuLink active" href="index.html">главная</a>
+        <a href="about.html" class="mainMenuLink">о нас</a>
+        <a href="assortment.html" class="mainMenuLink">ассортимент</a>
+        <a href="events.html" class="mainMenuLink">события</a>
+        <a href="space.html" class="mainMenuLink">пространство</a>
+        <a href="journal.html" class="mainMenuLink">журнал</a>
+      </nav>
+      <div class="gradient">
+        <div class="logos"></div>
+        <div class="info" data-text="ТВОЙ АЛЬТЕРНАТИВНЫЙ ГАРДЕРОБ">
+          твой альтернативный гардероб
+        </div>
+      </div>
+    </section>
+    <div class="page">
+      <div class="bg-decorations">
+        <img src="../images/trible1.svg" class="bg-float trible1" />
+        <img src="../images/trible2.svg" class="bg-float trible2" />
+        <img src="../images/trible3.svg" class="bg-float trible3" />
+        <img src="../images/trible4.svg" class="bg-float trible4" />
+        <img src="../images/trible5.svg" class="bg-float trible5" />
+        <img src="../images/trible6.svg" class="bg-float trible6" />
+        <img src="../images/trible7.svg" class="bg-float trible7" />
+        <img src="../images/trible8.svg" class="bg-float trible8" />
+        <img src="../images/trible9.svg" class="bg-float trible9" />
+      </div>
+      <section class="screen screen_1-1">
+        <div class="quote1">
+          <h1>Винтаж</h1>
+          <div class="slovo">со смыслом</div>
+        </div>
+        <div class="quote2">
+          <h3>
+            Потёртый шов, след от пряжки, залом на ткани — всё это <br />
+            не износ, а личная подпись прошлого. Мы не продаём имитацию винтажа.
+            Мы собираем вещи, которые и есть прошлое.
+          </h3>
+        </div>
+      </section>
+      <section class="screen screen_1-2">
+        <div class="cardsTrack">
+          <a class="card" href="journal.html">
+            <img src="../images/card1.svg" alt="journal.html" />
+          </a>
+
+          <a class="card" href="space.html">
+            <img src="../images/card2.svg" alt="space.html" />
+          </a>
+
+          <a class="card" href="assortment.html">
+            <img src="../images/card3.svg" alt="assortment.html" />
+          </a>
+        </div>
+      </section>
+      <section class="screen screen_1-3">
+        <h1>Товары</h1>
+        <div class="tovary">
+          <div class="tovar">
+            <img src="../images/window1.svg" alt="окно1" />
+            <h2>5400 ₽</h2>
+          </div>
+          <div class="tovar">
+            <img src="../images/window2.svg" alt="окно2" />
+            <h2>4300 ₽</h2>
+          </div>
+          <div class="tovar">
+            <img src="../images/window3.svg" alt="окно3" />
+            <h2>4300 ₽</h2>
+          </div>
+        </div>
+        <button class="knopka" onclick="location.href = 'assortment.html'">
+          посмотреть все
+        </button>
+      </section>
+      <section class="screen screen_1-4">
+        <div class="block-karty">
+          <h2>как до нас добраться</h2>
+          <div id="map" class="karta"></div>
+        </div>
+        <h3 class="opisanie">
+          10 минут пешком от метро Нагатинский Затон.<br /><br />20 минут бегом
+          от метро Технопарк.<br /><br />15 минут летом от кремля.
+        </h3>
+      </section>
+    </div>
+    <section class="footer">
+      <div class="imena">
+        <div class="me">
+          <h4>дизайн и код</h4>
+          <h3>Дарина Ломухина</h3>
+        </div>
+        <div class="kuratory">
+          <h4>кураторы</h4>
+          <h3>Камила Рихтер&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+          <h3>Аня Комкова</h3>
+        </div>
+      </div>
+      <img src="../images/garage.svg" class="garage" />
+      <div class="year">
+        <img src="../images/hse.svg" class="hse-logo" />
+        <h4>2026</h4>
+      </div>
+    </section>
   </body>
 </html>

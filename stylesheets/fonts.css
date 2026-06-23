@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Helmswald";
+  src: url("../fonts/Helmswald.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}

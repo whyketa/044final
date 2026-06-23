@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,16 +11,93 @@
     <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
   <body>
-    <nav class="mainMenu">
-      <a class="mainMenuLink" href="index.html">Главная</a>
-      <a href="about.html" class="mainMenuLink">О нас</a>
-      <a href="assortment.html" class="mainMenuLink active">Ассортимент</a>
-      <a href="events.html" class="mainMenuLink">События</a>
-      <a href="space.html" class="mainMenuLink">Пространство</a>
-      <a href="journal.html" class="mainMenuLink">Журнал</a>
-      <a class="mainMenuLink" href="cart.html">
-        Корзина: <span class="productCnt">0</span>
-      </a>
-    </nav>
+    <section class="main">
+      <nav class="mainMenu">
+        <a class="mainMenuLink" href="index.html">главная</a>
+        <a href="about.html" class="mainMenuLink">о нас</a>
+        <a href="assortment.html" class="mainMenuLink active">ассортимент</a>
+        <a href="events.html" class="mainMenuLink">события</a>
+        <a href="space.html" class="mainMenuLink">пространство</a>
+        <a href="journal.html" class="mainMenuLink">журнал</a>
+      </nav>
+      <div class="gradient">
+        <img src="../images/cvetok.svg" class="moving" id="img4" />
+        <img src="../images/computer.svg" class="moving" id="img5" />
+        <div class="logos"></div>
+        <div class="info" data-text="АВТОРСКИЙ МЕРЧ">авторский мерч</div>
+      </div>
+    </section>
+    <section class="screen screen_3-1">
+      <h1>Ассортимент</h1>
+      <div class="merch">
+        <div class="tovary-merch">
+          <img src="../images/merch1.svg" alt="мерч1" />
+          <h2>2000 ₽</h2>
+        </div>
+        <div class="tovary-merch-mini">
+          <img src="../images/merch2.svg" alt="мерч2" />
+          <h2>3400 ₽</h2>
+        </div>
+        <div class="tovary-merch-mini">
+          <img src="../images/merch3.svg" alt="мерч3" />
+          <h2>1500 ₽</h2>
+        </div>
+      </div>
+      <div class="merch">
+        <div class="tovary-merch-mini">
+          <img src="../images/merch4.svg" alt="мерч4" />
+          <h2>3000 ₽</h2>
+        </div>
+        <div class="tovary-merch">
+          <img src="../images/merch5.svg" alt="мерч5" />
+          <h2>4400 ₽</h2>
+        </div>
+        <div class="tovary-merch-mini">
+          <img src="../images/merch6.svg" alt="мерч6" />
+          <h2>5000 ₽</h2>
+        </div>
+      </div>
+    </section>
+    <section class="screen screen_3-2">
+      <div class="merch">
+        <div class="tovary-merch-mini">
+          <img src="../images/merch7.svg" alt="мерч7" />
+          <h2>3000 ₽</h2>
+        </div>
+        <div class="tovary-merch-mini">
+          <img src="../images/merch8.svg" alt="мерч8" />
+          <h2>5000 ₽</h2>
+        </div>
+        <div class="tovary-merch">
+          <img src="../images/merch9.svg" alt="мерч9" />
+          <h2>4400 ₽</h2>
+        </div>
+      </div>
+      <img src="../images/banner4.svg" class="banner-photo3" />
+      <button
+        class="knopka"
+        onclick="location.href = 'https://whyketa.github.io/3-module/'"
+      >
+        коллекции из прошлого
+      </button>
+    </section>
+    <section class="footer">
+      <div class="imena">
+        <div class="me">
+          <h4>дизайн и код</h4>
+          <h3>Дарина Ломухина</h3>
+        </div>
+        <div class="kuratory">
+          <h4>кураторы</h4>
+          <h3>Камила Рихтер&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+          <h3>Аня Комкова</h3>
+        </div>
+      </div>
+      <img src="../images/garage.svg" class="garage" />
+      <div class="year">
+        <img src="../images/hse.svg" class="hse-logo" />
+        <h4>2026</h4>
+      </div>
+    </section>
   </body>
 </html>

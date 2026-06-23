@@ -1,29 +1,87 @@
-.header {
-  width: 100%;
-  padding: 24px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  background-color: #363636;
+  overflow-x: hidden;
+  font-family: "Inter";
+  font-weight: 400;
+}
+h1 {
+  font-family: "Helmswald";
+  font-weight: 400;
+  font-size: 6.25vw;
+  color: #ffffff;
+}
+h2 {
+  text-transform: uppercase;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.52vw;
+  color: #000000;
+
+  position: relative;
+  display: inline-block;
+  z-index: 1;
 }
 
-.logo {
-  text-decoration: none;
-  color: #000;
-  font-size: 24px;
-  font-weight: 600;
+h2::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+
+  color: transparent;
+  -webkit-text-stroke: 0.6vw #ffffff;
+
+  z-index: -1;
+  pointer-events: none;
+}
+h3 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1.38vw;
+  color: #ffffff;
+}
+h4 {
+  text-transform: uppercase;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.11vw;
+  color: #9e9e9e;
 }
 
+/*стили для кнопок*/
+.knopka {
+  text-transform: uppercase;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.11vw;
+  color: #000000;
+
+  border: 0.2vw solid #70d6d8;
+  border-radius: 2.7vw;
+  background-color: #fdabca;
+
+  padding: 1.3vw 5.2vw;
+}
+.knopka:active {
+  background-color: #70d6d8;
+}
+
+/*меню*/
 .mainMenu {
   display: flex;
   align-items: center;
-  gap: 72px;
+  gap: 4.16vw;
+  position: absolute;
+  margin-top: 2.2vw;
+  font-size: 1.39vw;
 }
 
 .mainMenuLink {
   position: relative;
   text-decoration: none;
   color: #000;
-  font-size: 24px;
+  font-size: 1.38vw;
   transition: 0.3s ease;
 }
 
@@ -113,9 +171,14 @@
   font-size: 2.5vw;
 }
 
-.main_screen_4 {
+/*стили главных экранов*/
+.main {
+  display: flex;
   height: 62.5vw;
   width: 100%;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
 }
 .gradient {
   height: 100%;
@@ -135,6 +198,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 2.22vw;
 }
 .logos {
   background-size: contain;
@@ -145,4 +210,419 @@
   background-image: url("../images/logo.svg");
   display: flex;
   justify-content: center;
+  z-index: 2;
+}
+.info {
+  text-transform: uppercase;
+  font-size: 1.52vw;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  isolation: isolate;
+}
+.info::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  color: transparent;
+  -webkit-text-stroke: 0.6vw #fff;
+  z-index: -1;
+}
+
+/*подвал*/
+.footer {
+  overflow: hidden;
+  background-color: #000;
+  width: 100%;
+  height: 22.57vw;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+}
+.imena {
+  width: 26.38vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.47vw;
+  align-items: center;
+  justify-content: center;
+}
+.me {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.kuratory {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.garage {
+  width: 28.96vw;
+  height: 16.74vw;
+  margin-left: 13.75vw;
+  margin-top: 2.7vw;
+  margin-right: 3.68vw;
+}
+.year {
+  width: 30.97vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.3vw;
+}
+
+/*для экранов главной страницы*/
+.screen {
+  width: 100%;
+  height: 62.5vw;
+  position: relative;
+  z-index: 2;
+}
+.page {
+  position: relative;
+  overflow: hidden;
+}
+.bg-decorations {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.trible1 {
+  top: 3.3vw;
+  left: 3.95vw;
+  width: 44.3vw;
+  --rotate: -15deg;
+}
+
+.trible2 {
+  top: 4vw;
+  right: -3.4vw;
+  width: 41.8vw;
+  --rotate: 20deg;
+}
+
+.trible3 {
+  top: 32.9vw;
+  left: -3.4vw;
+  width: 27.56vw;
+  --rotate: -25deg;
+}
+
+.trible4 {
+  top: 41.45vw;
+  right: -1vw;
+  width: 41.6vw;
+  --rotate: 15deg;
+}
+
+.trible5 {
+  top: 101vw;
+  left: -14.5vw;
+  width: 42.15vw;
+  --rotate: 8deg;
+}
+.trible6 {
+  top: 176vw;
+  left: 1.25vw;
+  width: 15.83vw;
+  --rotate: 8deg;
+}
+.trible7 {
+  top: 174vw;
+  right: -25vw;
+  width: 63vw;
+  --rotate: 8deg;
+}
+.trible8 {
+  top: 229vw;
+  left: -15.76vw;
+  width: 72.22vw;
+  --rotate: 8deg;
+}
+.trible9 {
+  top: 240.48vw;
+  right: -16.45vw;
+  width: 43.13vw;
+  --rotate: 8deg;
+}
+
+/*первый экран главной стр*/
+.screen_1-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8.61vw;
+}
+.slovo {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.52vw;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.quote1 {
+  display: flex;
+  gap: 1.38vw;
+  flex-direction: column;
+  align-items: center;
+}
+.quote2 {
+  display: flex;
+  width: 42.8vw;
+  text-align: center;
+}
+
+/*второй экран гланвой стр*/
+.screen_1-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.cardsTrack {
+  display: flex;
+  gap: 3vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 3vw 15vw 4vw;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.cardsTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 73.9vw;
+  height: 37.8vw;
+  border-radius: 0.83vw;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  overflow: hidden;
+  transform: scale(0.85);
+  filter: brightness(0.6);
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease,
+    box-shadow 0.8s ease;
+}
+
+.card.active {
+  transform: scale(1);
+  opacity: 1;
+  filter: brightness(1.12);
+  box-shadow:
+    0 0 2vw rgba(255, 255, 255, 0.45),
+    0 0 3vw rgba(255, 255, 255, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/*третий экран главной стр*/
+.screen_1-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+}
+.tovary {
+  display: flex;
+  flex-direction: row;
+  gap: 4.16vw;
+  margin-top: 4.16vw;
+  margin-bottom: 4.16vw;
+}
+.tovar {
+  width: 24.375vw;
+  height: 37.98vw;
+  gap: 1vw;
+  flex-direction: column;
+  text-align: right;
+}
+.tovar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/*последний экран главной стр*/
+.screen_1-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3.95vw;
+}
+.block-karty {
+  display: flex;
+  text-align: left;
+  gap: 2.7vw;
+  flex-direction: column;
+}
+.karta {
+  width: 56.45vw;
+  height: 37.7vw;
+  border: 0.2vw solid #70d6d8;
+  border-radius: 0.8vw;
+}
+.opisanie {
+  text-align: left;
+  width: 20.41vw;
+}
+
+/*первый экран о нас*/
+.screen_2-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  gap: 4.72vw;
+}
+.filosofia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.08vw;
+}
+.opisanie-filosofii {
+  text-align: center;
+  width: 59vw;
+}
+.banner-photo1 {
+  width: 48.82vw;
+  height: 27.43vw;
+}
+.banner-pervuy {
+  display: flex;
+  flex-direction: row;
+  gap: 14.4vw;
+}
+.block1 {
+  display: flex;
+  gap: 5.4vw;
+  flex-direction: column;
+}
+.info-block {
+  display: flex;
+  gap: 2.08vw;
+  text-align: left;
+  flex-direction: column;
+}
+.contacts {
+  display: flex;
+  gap: 1vw;
+  text-align: left;
+  flex-direction: column;
+}
+
+/*ВТОРОЙ экран о нас*/
+.screen_2-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  gap: 4.16vw;
+}
+.banner-photo2 {
+  width: 79.86vw;
+  height: 18.4vw;
+}
+.block2 {
+  display: flex;
+  flex-direction: row;
+  gap: 13.61vw;
+}
+.banner-vtoroi {
+  display: flex;
+  gap: 9.4vw;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* первый экран ассортимент*/
+.screen_3-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  gap: 4.16vw;
+}
+.merch {
+  display: flex;
+  flex-direction: row;
+  gap: 4.16vw;
+}
+.tovary-merch {
+  display: flex;
+  width: 38.19vw;
+  gap: 1vw;
+  text-align: right;
+  flex-direction: column;
+}
+.tovary-merch img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.tovary-merch-mini {
+  display: flex;
+  width: 17.36vw;
+  gap: 1vw;
+  text-align: right;
+  flex-direction: column;
+}
+.tovary-merch-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* втрой экран ассортимент*/
+.screen_3-2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 4.16vw;
+}
+.banner-photo3 {
+  width: 79.86vw;
+  height: 18.4vw;
+  margin-top: 7.84vw;
 }
