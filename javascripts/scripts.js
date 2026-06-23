@@ -44,114 +44,133 @@ document.addEventListener("mousemove", (e) => {
 });
 
 // анимация трайблов
-const floatElements = [...document.querySelectorAll(".bg-float")];
+document.addEventListener("DOMContentLoaded", () => {
+  const page = document.querySelector(".page");
+  const floatElements = [...document.querySelectorAll(".bg-float")];
 
-const trible3 = document.querySelector(".trible3");
-const trible7 = document.querySelector(".trible7");
+  if (!page || floatElements.length === 0) return;
 
-const escapingElements = [trible3, trible7].filter(Boolean);
+  const trible3 = document.querySelector(".trible3");
+  const trible7 = document.querySelector(".trible7");
 
-const usualFloatElements = floatElements.filter((el) => {
-  return !escapingElements.includes(el);
-});
+  const escapingElements = [trible3, trible7].filter(Boolean);
 
-function randomBetween(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
-function resetElement(el) {
-  el.style.setProperty("--x", "0px");
-  el.style.setProperty("--y", "0px");
-  el.style.setProperty("--float-rotate", "0deg");
-}
-
-function moveElement(el) {
-  const x = randomBetween(-45, 45);
-  const y = randomBetween(-70, 70);
-  const rotate = randomBetween(-6, 6);
-
-  el.style.setProperty("--x", `${x}px`);
-  el.style.setProperty("--y", `${y}px`);
-  el.style.setProperty("--float-rotate", `${rotate}deg`);
-}
-
-function chooseMovingElements() {
-  usualFloatElements.forEach((el) => {
-    resetElement(el);
+  const usualFloatElements = floatElements.filter((el) => {
+    return !escapingElements.includes(el);
   });
 
-  const count = 3;
-  const shuffled = [...usualFloatElements].sort(() => Math.random() - 0.5);
-  const movingElements = shuffled.slice(0, count);
+  function randomBetween(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 
-  movingElements.forEach((el) => {
-    moveElement(el);
-  });
-}
+  function resetElement(el) {
+    if (!el) return;
 
-function getElementTopInsidePage(el) {
-  const page = document.querySelector(".page");
-  const pageTop = page.getBoundingClientRect().top + window.scrollY;
-  const elTop = el.getBoundingClientRect().top + window.scrollY;
+    el.style.setProperty("--x", "0px");
+    el.style.setProperty("--y", "0px");
+    el.style.setProperty("--float-rotate", "0deg");
+  }
 
-  return elTop - pageTop;
-}
+  function moveElement(el) {
+    if (!el) return;
 
-function flyDownAndBack(el) {
-  const page = document.querySelector(".page");
-  const pageHeight = page.scrollHeight;
-  const elTop = getElementTopInsidePage(el);
-  const distance = pageHeight - elTop + 200;
+    const x = randomBetween(-45, 45);
+    const y = randomBetween(-70, 70);
+    const rotate = randomBetween(-6, 6);
 
-  resetElement(el);
-  el.classList.add("is-escaping");
+    el.style.setProperty("--x", `${x}px`);
+    el.style.setProperty("--y", `${y}px`);
+    el.style.setProperty("--float-rotate", `${rotate}deg`);
+  }
 
-  el.style.setProperty("--y", `${distance}px`);
-  el.style.setProperty("--float-rotate", "14deg");
+  function chooseMovingElements() {
+    if (usualFloatElements.length === 0) return;
 
-  setTimeout(() => {
+    usualFloatElements.forEach((el) => {
+      resetElement(el);
+    });
+
+    const count = Math.min(3, usualFloatElements.length);
+    const shuffled = [...usualFloatElements].sort(() => Math.random() - 0.5);
+    const movingElements = shuffled.slice(0, count);
+
+    movingElements.forEach((el) => {
+      moveElement(el);
+    });
+  }
+
+  function getElementTopInsidePage(el) {
+    if (!el || !page) return 0;
+
+    const pageTop = page.getBoundingClientRect().top + window.scrollY;
+    const elTop = el.getBoundingClientRect().top + window.scrollY;
+
+    return elTop - pageTop;
+  }
+
+  function flyDownAndBack(el) {
+    if (!el || !page) return;
+
+    const pageHeight = page.scrollHeight;
+    const elTop = getElementTopInsidePage(el);
+    const distance = pageHeight - elTop + 200;
+
     resetElement(el);
-  }, 14000);
+    el.classList.add("is-escaping");
 
-  setTimeout(() => {
-    el.classList.remove("is-escaping");
-  }, 27000);
-}
+    el.style.setProperty("--y", `${distance}px`);
+    el.style.setProperty("--float-rotate", "14deg");
 
-function flyUpAndBack(el) {
-  const elTop = getElementTopInsidePage(el);
-  const distance = -elTop - el.offsetHeight - 200;
+    setTimeout(() => {
+      resetElement(el);
+    }, 14000);
 
-  resetElement(el);
-  el.classList.add("is-escaping");
+    setTimeout(() => {
+      el.classList.remove("is-escaping");
+    }, 27000);
+  }
 
-  el.style.setProperty("--y", `${distance}px`);
-  el.style.setProperty("--float-rotate", "-14deg");
+  function flyUpAndBack(el) {
+    if (!el || !page) return;
 
-  setTimeout(() => {
+    const elTop = getElementTopInsidePage(el);
+    const distance = -elTop - el.offsetHeight - 200;
+
     resetElement(el);
-  }, 14000);
+    el.classList.add("is-escaping");
+
+    el.style.setProperty("--y", `${distance}px`);
+    el.style.setProperty("--float-rotate", "-14deg");
+
+    setTimeout(() => {
+      resetElement(el);
+    }, 14000);
+
+    setTimeout(() => {
+      el.classList.remove("is-escaping");
+    }, 27000);
+  }
 
   setTimeout(() => {
-    el.classList.remove("is-escaping");
-  }, 27000);
-}
-
-setTimeout(() => {
-  chooseMovingElements();
-
-  setInterval(() => {
     chooseMovingElements();
-  }, 4000);
-}, 2500);
 
-setTimeout(() => {
-  flyDownAndBack(trible3);
-}, 5000);
+    setInterval(() => {
+      chooseMovingElements();
+    }, 4000);
+  }, 2500);
 
-setTimeout(() => {
-  flyUpAndBack(trible7);
-}, 7000);
+  if (trible3) {
+    setTimeout(() => {
+      flyDownAndBack(trible3);
+    }, 5000);
+  }
+
+  if (trible7) {
+    setTimeout(() => {
+      flyUpAndBack(trible7);
+    }, 7000);
+  }
+});
 
 //анимация листалки
 document.addEventListener("DOMContentLoaded", () => {
@@ -396,28 +415,94 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //карта
-// Функция инициализации карты
 function initMap() {
-  // Создаём карту
+  const mapBlock = document.getElementById("map");
+
+  if (!mapBlock) return;
+
   const map = new ymaps.Map("map", {
-    center: [55.7873, 37.641764], // Координаты центра карты, наше адрес
-    zoom: 16, // Масштаб карты
+    center: [55.7873, 37.641764],
+    zoom: 16,
   });
 
-  // Создаём метку на карте
   const placemark = new ymaps.Placemark(
     [55.7873, 37.641764],
     {
       balloonContent: "044 shop, улица Слэя, 52",
     },
     {
-      preset: "islands#redIcon", // Красная иконка
+      preset: "islands#redIcon",
     },
   );
 
-  // Добавляем метку на карту
   map.geoObjects.add(placemark);
 }
 
-// Ждём загрузки API Яндекс Карт
-ymaps.ready(initMap);
+document.addEventListener("DOMContentLoaded", () => {
+  const mapBlock = document.getElementById("map");
+
+  if (!mapBlock) return;
+
+  if (typeof ymaps !== "undefined") {
+    ymaps.ready(initMap);
+  }
+});
+
+//АНИМАЦИЯ МЕРОПРИЯТИЙ
+document.addEventListener("DOMContentLoaded", () => {
+  const scene = document.getElementById("scene");
+
+  if (!scene) return;
+
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  const ease = 0.08;
+  const power = 7;
+
+  document.addEventListener("mousemove", (e) => {
+    const normalizedX = (e.clientX / window.innerWidth - 0.5) * 2;
+    const normalizedY = (e.clientY / window.innerHeight - 0.5) * -2;
+
+    targetX = normalizedX * power;
+    targetY = normalizedY * power;
+  });
+
+  document.addEventListener("mouseout", (e) => {
+    if (!e.relatedTarget) {
+      targetX = 0;
+      targetY = 0;
+    }
+  });
+
+  function animateScene() {
+    currentX += (targetX - currentX) * ease;
+    currentY += (targetY - currentY) * ease;
+
+    scene.style.transform = `rotateY(${currentX}deg) rotateX(${currentY}deg)`;
+
+    requestAnimationFrame(animateScene);
+  }
+
+  animateScene();
+});
+
+//стирание формы
+const form = document.querySelector(".travel-form");
+const inputs = document.querySelectorAll(".form-input");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  form.classList.add("sent");
+
+  inputs.forEach((input) => {
+    input.value = "";
+  });
+
+  setTimeout(() => {
+    form.classList.remove("sent");
+  }, 600);
+});

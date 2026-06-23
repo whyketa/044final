@@ -396,6 +396,7 @@ h4 {
   position: relative;
 }
 .cardsTrack {
+  width: 100%;
   display: flex;
   gap: 3vw;
   overflow-x: auto;
@@ -625,4 +626,476 @@ h4 {
   width: 79.86vw;
   height: 18.4vw;
   margin-top: 7.84vw;
+}
+
+/*МЕРОПРИЯТИЯ МЕГА ЭКРАН*/
+.posters-page {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  perspective: 83.33vw;
+}
+
+.scene-scale {
+  width: 100vw;
+  height: 125vw;
+  position: relative;
+  transform-origin: top left;
+}
+
+.scene {
+  width: 100vw;
+  height: 125vw;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.poster-group {
+  position: absolute;
+  width: 41.52vw;
+  height: 44vw;
+  transform-style: preserve-3d;
+}
+
+.poster {
+  position: absolute;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transform: var(--t);
+  transition: filter 0.3s ease;
+  width: 16.38vw;
+  height: 23.36vw;
+}
+
+.poster img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.poster:hover {
+  z-index: 100;
+  filter: brightness(1.08);
+}
+
+.poster:hover img {
+  transform: scale(1.04);
+}
+
+/* группа 1  слева сверху */
+
+.group1 {
+  left: 3.47vw;
+  top: 4.3vw;
+}
+
+.group1 .poster1 {
+  left: 1.59vw;
+  top: 23.68vw;
+}
+
+.group1 .poster2 {
+  left: 14.23vw;
+  top: 11.73vw;
+}
+
+.group1 .poster3 {
+  left: 28.47vw;
+  top: 4.65vw;
+}
+
+.group1 h2 {
+  text-align: left;
+  width: 12.43vw;
+  left: 31.8vw;
+  top: 28.88vw;
+}
+
+/* группа 2 справа сверху */
+
+.group2 {
+  right: 4.16vw;
+  top: 4vw;
+}
+
+.group2 .poster4 {
+  left: 1.52vw;
+  top: 5.27vw;
+}
+
+.group2 .poster5 {
+  left: 6.94vw;
+  top: 26.11vw;
+}
+
+.group2 .poster6 {
+  left: 21.25vw;
+  top: 4.7vw;
+}
+
+.group2 h2 {
+  left: 24.3vw;
+  top: 32vw;
+  width: 15.35vw;
+  text-align: right;
+}
+
+/* группа 3 центр слева */
+
+.group3 {
+  left: 20.63vw;
+  top: 40vw;
+}
+
+.group3 .poster7 {
+  left: 0;
+  top: 15.13vw;
+}
+
+.group3 .poster8 {
+  left: 11.88vw;
+  top: 5.76vw;
+}
+
+.group3 .poster9 {
+  left: 24.7vw;
+  top: 17.43vw;
+}
+
+.group3 h2 {
+  width: 12.84vw;
+  left: 4.86vw;
+  top: 39.7vw;
+}
+
+/* группа 4 слева снизу второй экран */
+
+.group4 {
+  left: 6.32vw;
+  top: 76.11vw;
+}
+
+.group4 .poster10 {
+  left: 0;
+  top: 8.89vw;
+}
+
+.group4 .poster11 {
+  left: 6.94vw;
+  top: 18.54vw;
+}
+
+.group4 .poster12 {
+  left: 22.5vw;
+  top: 15.13vw;
+}
+
+.group4 h2 {
+  left: 24.16vw;
+  top: 39.3vw;
+}
+
+/* группа 5  справа снизу */
+
+.group5 {
+  left: 53vw;
+  top: 78vw;
+}
+
+.group5 .poster13 {
+  left: 6.38vw;
+  top: 10vw;
+}
+
+.group5 .poster14 {
+  left: 18.75vw;
+  top: 0;
+}
+
+.group5 .poster15 {
+  left: 25.48vw;
+  top: 16.9vw;
+  --t: rotate(-1deg);
+}
+
+.group5 h2 {
+  width: 18.4vw;
+  left: 6.25vw;
+  top: 36.45vw;
+}
+
+/*псевдо 404*/
+.screen_4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.left-side {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  padding-left: 7vw;
+  padding-top: 10vw;
+}
+.right-side {
+  height: 100%;
+  width: 50%;
+  padding-right: 4vw;
+}
+.logos-mini {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21vw;
+  height: 8.88vw;
+  background-image: url("../images/logo.svg");
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4vw;
+}
+.screen_4 .knopka {
+  width: fit-content;
+  align-self: flex-start;
+  padding: 1.38vw 5vw;
+  align-self: flex-start;
+}
+.kot {
+  width: 69vw;
+  height: 84.65vw;
+  transform: rotate(8deg);
+  z-index: 2;
+}
+.g_trible1 {
+  top: 39.23vw;
+  left: -9.65vw;
+  width: 42.84vw;
+}
+.g_trible2 {
+  top: -6vw;
+  left: 33.54vw;
+  width: 32.98vw;
+}
+.g_trible3 {
+  top: -9.58vw;
+  left: 63.125vw;
+  width: 42.84vw;
+}
+.g_trible4 {
+  top: 49.65vw;
+  left: 50vw;
+  width: 24.9vw;
+  z-index: 9;
+}
+.bg-decorations img {
+  position: absolute;
+}
+
+/* страница с пространством блок с домиком*/
+.screen_5-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: row;
+  gap: 5vw;
+  overflow: hidden;
+}
+
+.house-wrapper {
+  position: relative;
+  isolation: isolate;
+  width: 56.25vw;
+  height: 48.75vw;
+}
+
+.house-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -3vw;
+  background-image: url("../images/house.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2.2vw);
+  opacity: 0.65;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.house-img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+}
+
+.room-overlay {
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+.room-overlay.active {
+  animation: roomFade 3s ease forwards;
+}
+
+.house-zone {
+  position: absolute;
+  z-index: 5;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.zone-1 {
+  width: 33.54vw;
+  height: 19vw;
+  top: 0;
+  left: 17.5vw;
+}
+.room-1 {
+  width: 33.54vw;
+  height: 19vw;
+  top: 0;
+  left: 17.5vw;
+}
+
+.zone-2 {
+  left: 17.4vw;
+  top: 19vw;
+  width: 38.95vw;
+  height: 16.25vw;
+}
+.room-2 {
+  left: 17.4vw;
+  top: 19vw;
+  width: 38.95vw;
+  height: 16.25vw;
+}
+.zone-3 {
+  left: 17.4vw;
+  top: 35vw;
+  width: 39vw;
+  height: 13.75vw;
+}
+.room-3 {
+  left: 17.4vw;
+  top: 35vw;
+  width: 39vw;
+  height: 13.75vw;
+}
+
+.zone-4 {
+  left: 0;
+  top: 22vw;
+  width: 17.5vw;
+  height: 12.7vw;
+}
+.room-4 {
+  left: 0;
+  top: 22vw;
+  width: 17.5vw;
+  height: 12.7vw;
+}
+
+.zone-5 {
+  left: 0;
+  top: 35vw;
+  width: 11.87vw;
+  height: 12vw;
+}
+.room-5 {
+  left: 0;
+  top: 35vw;
+  width: 11.87vw;
+  height: 12vw;
+}
+
+.house-text {
+  display: flex;
+  flex-direction: column;
+  width: 28vw;
+  z-index: 2;
+  gap: 2vw;
+}
+
+/*второй экран пространства*/
+.screen_5-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 2.91vw;
+  overflow: hidden;
+}
+
+/*третий экран пространства*/
+.screen_5-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.travel-form {
+  width: 79.86vw;
+  height: 43.7vw;
+  border: 0.2vw solid #ff9bc8;
+  border-radius: 0.8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/bg-gradient.svg");
+}
+
+.form-input {
+  width: 63vw;
+  height: 3.5vw;
+  border: 0.2vw solid #ff9bc8;
+  border-radius: 0.6vw;
+  background: #f3f3f3;
+  padding: 0 1.2vw;
+  font-family: "Inter";
+  font-size: 1.1vw;
+  color: #000;
+  outline: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: #b8b8b8;
+}
+
+.form-input:focus {
+  transform: scale(1.02);
+  border-color: #9ffcff;
+  box-shadow: 0 0 1vw rgba(159, 252, 255, 0.7);
+  background-color: #fff;
+}
+.travel-form.sent {
+  animation: formSent 0.6s ease;
+}
+.travel-form h3 {
+  text-align: center;
 }

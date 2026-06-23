@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="javascripts/scripts.js" defer></script>
     <script src="javascripts/index.js" defer></script>
+    <script src="javascripts/house.js" defer></script>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
@@ -24,6 +25,149 @@
         <img src="./images/styl.svg" class="moving" id="img6" />
         <div class="logos"></div>
         <div class="info" data-text="НАШ МАГАЗИНЧИК">наш магазинчик</div>
+      </div>
+    </section>
+    <section class="screen screen_5-1">
+      <div class="house-wrapper">
+        <img src="./images/house.svg" class="house-img" alt="домик" />
+
+        <img src="./images/room-1.svg" class="room-overlay room-1" alt="" />
+        <img src="./images/room-2.svg" class="room-overlay room-2" alt="" />
+        <img src="./images/room-3.svg" class="room-overlay room-3" alt="" />
+        <img src="./images/room-4.svg" class="room-overlay room-4" alt="" />
+        <img src="./images/room-5.svg" class="room-overlay room-5" alt="" />
+
+        <button class="house-zone zone-1" data-room="1"></button>
+        <button class="house-zone zone-2" data-room="2"></button>
+        <button class="house-zone zone-3" data-room="3"></button>
+        <button class="house-zone zone-4" data-room="4"></button>
+        <button class="house-zone zone-5" data-room="5"></button>
+      </div>
+
+      <div class="house-text">
+        <h2 id="room-title">торговый зал</h2>
+        <h3 id="room-description">
+          Торговый зал светлый и красивый. Пол устилает очень крутой старый
+          ковёр. Он — наша гордость, я даже не помню <br />
+          с какой помойки его притащили. <br />
+          <br />Комнату украшают старинные пуфики, но всё внимание привлекают
+          вешалки <br />с красивой старинной одеждой.
+        </h3>
+      </div>
+      <div class="room-texts">
+        <template id="text-room-1">
+          <h2>торговый зал</h2>
+          <h3>
+            Торговый зал светлый и красивый. Пол устилает очень крутой старый
+            ковёр.<br />Он — наша гордость, я даже не помню <br />
+            с какой помойки его притащили. <br />
+            <br />
+            Комнату украшают старинные пуфики, но всё внимание привлекают
+            вешалки <br />с красивой старинной одеждой.
+          </h3>
+        </template>
+
+        <template id="text-room-2">
+          <h2>склад</h2>
+          <h3>
+            В любом магазине есть такое помещение. В этих коробках лежат
+            прошлогодняя коллекция, новая поставка и прочие айтемы <br />из
+            средневековья. <br />
+            <br />
+            Помещение темное и тихое, его используют только для хранения.
+          </h3>
+        </template>
+
+        <template id="text-room-3">
+          <h2>подсобка</h2>
+          <h3>
+            Это помещение обставлено уютно, почти по-домашнему. Основная функция
+            — это отдых. <br /><br />Здесь можно уединиться после долгого
+            рабочего дня, заняться документами, оставить вещи, посмотреть
+            телевизор.
+          </h3>
+        </template>
+
+        <template id="text-room-4">
+          <h2>помещение досмотра</h2>
+          <h3>
+            Самое интересное начинается здесь. Этот блок отведен специально
+            <br />для подготовки к перемещениям <br />во времени и, собственно,
+            <br />для перемещений во времени. <br />
+            <br />
+            Помещение досмотра находится <br />над комнатой с машиной времени
+            <br />и выполняет подготовительную функцию.
+          </h3>
+        </template>
+
+        <template id="text-room-5">
+          <h2>комната путешествий во времени</h2>
+          <h3>
+            Лестница соединяет её с верхним помещением и задаёт точку входа
+            <br />в пространство. В центре стоит один диван, и именно он
+            является машиной времени. <br />
+            <br />
+            Всё устроено максимально просто <br />и без лишних деталей —
+            пространство работает как чистая функция, где всё внимание
+            сосредоточено на процессе.
+          </h3>
+        </template>
+      </div>
+    </section>
+    <section class="screen screen_5-2">
+      <h1>Интерьер</h1>
+      <div class="cardsTrack">
+        <a class="card" href="">
+          <img src="./images/card4.svg" alt="" />
+        </a>
+
+        <a class="card" href="">
+          <img src="./images/card5.svg" alt="" />
+        </a>
+
+        <a class="card" href="">
+          <img src="./images/card6.svg" alt="" />
+        </a>
+      </div>
+    </section>
+    <section class="screen screen_5-3">
+      <form class="travel-form">
+        <h2>Записаться на сеанс путешествия во времени</h2>
+
+        <h3>
+          В нашем магазине действует уникальное предложение: вы можете<br />
+          лично отправиться в прошлое за одеждой на машине времени.
+        </h3>
+
+        <input class="form-input" type="text" placeholder="Фамилия Имя" />
+        <input class="form-input" type="tel" placeholder="Номер телефона" />
+        <input
+          class="form-input"
+          type="email"
+          placeholder="Электронная почта"
+        />
+
+        <button class="knopka" onclick="location.href = '404.js'">
+          отправить
+        </button>
+      </form>
+    </section>
+    <section class="footer">
+      <div class="imena">
+        <div class="me">
+          <h4>дизайн и код</h4>
+          <h3>Дарина Ломухина</h3>
+        </div>
+        <div class="kuratory">
+          <h4>кураторы</h4>
+          <h3>Камила Рихтер&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+          <h3>Аня Комкова</h3>
+        </div>
+      </div>
+      <img src="./images/garage.svg" class="garage" />
+      <div class="year">
+        <img src="./images/hse.svg" class="hse-logo" />
+        <h4>2026</h4>
       </div>
     </section>
   </body>

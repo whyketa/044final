@@ -90,3 +90,22 @@
 .bg-float.is-escaping {
   transition: transform 14s ease-in-out;
 }
+
+/*исчезновение обводки*/
+@keyframes roomFade {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
