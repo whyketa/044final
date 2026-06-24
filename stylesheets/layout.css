@@ -577,6 +577,7 @@ h4 {
   position: relative;
   transform-style: preserve-3d;
   will-change: transform;
+  display: flex;
 }
 
 .poster-group {

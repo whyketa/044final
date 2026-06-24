@@ -1,0 +1,172 @@
+/* ПЛАНШЕТ 768 x 1024 */
+@media (max-width: 1024px) {
+  /*основные стили*/
+  h1 {
+    font-size: 11.7vw;
+  }
+  h2 {
+    font-size: 2.86vw;
+  }
+  h2::before {
+    -webkit-text-stroke: 1vw #ffffff;
+  }
+  h3 {
+    font-size: 2.6vw;
+  }
+  h4 {
+    font-size: 2vw;
+  }
+  .main {
+    height: 133vw;
+    .logos {
+      scale: calc(1.3);
+    }
+    .info {
+      font-size: 2.68vw;
+    }
+    .info::before {
+      -webkit-text-stroke: 1vw #fff;
+    }
+  }
+  .mainMenuLink {
+    font-size: 2.6vw;
+  }
+  .mainMenu {
+    gap: 2vw;
+    margin-top: 5vw;
+  }
+  .gradient {
+    gap: 5vw;
+  }
+  /*подвал*/
+  .footer {
+    height: 22.52vw;
+  }
+  .imena {
+    margin-left: 5vw;
+  }
+  .garage {
+    margin-left: 7vw;
+    margin-top: 2.7vw;
+    margin-right: 3.68vw;
+  }
+  .hse-logo {
+    width: 17.67;
+    height: 6.64vw;
+  }
+
+  /*главная*/
+  .screen_1-1 {
+    flex-direction: column;
+  }
+  .slovo {
+    font-size: 2.86vw;
+  }
+  .knopka {
+    font-size: 2vw;
+  }
+  .screen_1-3 {
+    overflow: visible;
+    gap: 2vw;
+  }
+  .block-karty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2.7vw;
+    flex-direction: column;
+  }
+
+  .opisanie {
+    display: none;
+  }
+
+  /*о нас*/
+  #img2 {
+    top: 60%;
+  }
+  #img3 {
+    top: 20%;
+  }
+  .filosofia {
+    margin-top: 15vw;
+    gap: 7vw;
+  }
+  /*ассортимент*/
+  .screen_3-1 {
+    margin-top: 6vw;
+    overflow: visible;
+  }
+  /*события*/
+  .scene {
+    flex-direction: column;
+  }
+  #img1 {
+    top: 33%;
+    left: 72%;
+  }
+  /*пространство*/
+  #img6 {
+    top: 65%;
+  }
+  .screen_5-1 {
+    flex-direction: column;
+    height: 133vw;
+    text-align: center;
+  }
+  .house-text {
+    width: 60vw;
+  }
+  /*журнал*/
+  .screen_6-1 {
+    height: 133vw;
+    text-align: center;
+    align-items: center;
+    gap: 9vw;
+  }
+}
+/* ТЕЛЕФОН 414 x 896 */
+@media (max-width: 480px) {
+  /*основные стили*/
+  h1 {
+    font-size: 19.32vw;
+  }
+  h2 {
+    font-size: 4.8vw;
+  }
+  h3 {
+    font-size: 4.34vw;
+  }
+  h4 {
+    font-size: 3.38vw;
+  }
+  .main {
+    height: 216vw;
+    .logos {
+      scale: calc(1.7);
+    }
+    .info {
+      font-size: 4.8vw;
+    }
+    .info::before {
+      -webkit-text-stroke: 2vw #fff;
+    }
+  }
+  .mainMenuLink {
+    font-size: 4.34vw;
+  }
+  .mainMenu {
+    gap: 4vw;
+    margin-top: 5vw;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .gradient {
+    gap: 10vw;
+  }
+  .screen {
+    height: 216vw;
+  }
+}
