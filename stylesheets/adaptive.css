@@ -69,13 +69,41 @@
     overflow: visible;
     gap: 2vw;
   }
-  .block-karty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2.7vw;
+  .screen_1-4 {
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5vw;
+    padding: 8vw 5vw;
+    height: auto;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+
+  .block-karty {
+    width: 75vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3vw;
+  }
+
+  .karta {
+    width: 82vw;
+    height: 54vw;
+    border: 0.35vw solid #70d6d8;
+    border-radius: 1.2vw;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
   .opisanie {
@@ -83,28 +111,195 @@
   }
 
   /*о нас*/
+  .screen_2-1,
+  .screen_2-2 {
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    padding: 8vw 5vw;
+    box-sizing: border-box;
+  }
+  .screen_2-1 h1 {
+    text-align: center;
+    margin-bottom: 4vw;
+  }
+
+  .screen_2-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+  }
+
+  .block2 {
+    width: 86vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+  }
+
+  .banner-photo2 {
+    width: 78vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .block2 .banner-photo1 {
+    width: 46vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .banner-vtoroi > .info-block {
+    width: 45vw;
+    align-items: flex-end;
+  }
+
+  .banner-vtoroi .knopka {
+    width: auto;
+    height: auto;
+    min-width: 22vw;
+    padding: 2vw 4vw;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .block2 .banner-photo1 {
+    display: none;
+  }
   #img2 {
     top: 60%;
+    left: 7%;
+    width: 35vw;
   }
   #img3 {
-    top: 20%;
+    top: 15%;
+    left: 65%;
+    width: 45vw;
+    z-index: 3;
   }
-  .filosofia {
-    margin-top: 15vw;
-    gap: 7vw;
-  }
+
   /*ассортимент*/
   .screen_3-1 {
     margin-top: 6vw;
     overflow: visible;
   }
+  #img4 {
+    top: 15%;
+    left: 5%;
+    width: 35vw;
+    z-index: 0;
+  }
+  #img5 {
+    top: 55%;
+    left: 65%;
+    width: 30vw;
+    z-index: 3;
+  }
   /*события*/
+  .posters-page {
+    width: 100%;
+    overflow: visible;
+    perspective: none;
+    padding: 8vw 0;
+    box-sizing: border-box;
+  }
+
+  .scene-scale {
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: none !important;
+  }
+
   .scene {
+    width: 100%;
+    height: auto;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 8vw;
+    position: relative;
+    transform: none !important;
+    transform-style: flat;
+  }
+
+  .poster-group,
+  .group1,
+  .group2,
+  .group3,
+  .group4,
+  .group5 {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    width: 72vw;
+    height: 62vw;
+    transform: none !important;
+  }
+
+  .poster {
+    position: absolute;
+    width: 28vw;
+    height: auto;
+  }
+
+  .poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .group1 .poster1,
+  .group2 .poster4,
+  .group3 .poster7,
+  .group4 .poster10,
+  .group5 .poster13 {
+    left: 0;
+    top: 16vw;
+  }
+
+  .group1 .poster2,
+  .group2 .poster5,
+  .group3 .poster8,
+  .group4 .poster11,
+  .group5 .poster14 {
+    left: 22vw;
+    top: 4vw;
+  }
+
+  .group1 .poster3,
+  .group2 .poster6,
+  .group3 .poster9,
+  .group4 .poster12,
+  .group5 .poster15 {
+    left: 44vw;
+    top: 16vw;
+  }
+
+  .poster-group h2,
+  .group1 h2,
+  .group2 h2,
+  .group3 h2,
+  .group4 h2,
+  .group5 h2 {
+    position: absolute;
+    width: 36vw;
+    left: 18vw;
+    top: 48vw;
+    text-align: center;
+    margin: 0;
   }
   #img1 {
     top: 33%;
-    left: 72%;
+    left: 74%;
   }
   /*пространство*/
   #img6 {
@@ -125,48 +320,698 @@
     align-items: center;
     gap: 9vw;
   }
-}
-/* ТЕЛЕФОН 414 x 896 */
-@media (max-width: 480px) {
-  /*основные стили*/
-  h1 {
-    font-size: 19.32vw;
+  #img7 {
+    top: 20%;
+    left: 60%;
+    width: 40vw;
+    z-index: 0;
   }
-  h2 {
-    font-size: 4.8vw;
-  }
-  h3 {
-    font-size: 4.34vw;
-  }
-  h4 {
-    font-size: 3.38vw;
-  }
-  .main {
-    height: 216vw;
-    .logos {
-      scale: calc(1.7);
-    }
-    .info {
-      font-size: 4.8vw;
-    }
-    .info::before {
-      -webkit-text-stroke: 2vw #fff;
-    }
-  }
-  .mainMenuLink {
-    font-size: 4.34vw;
-  }
-  .mainMenu {
-    gap: 4vw;
-    margin-top: 5vw;
-    flex-direction: column;
-    align-items: start;
+  #img8 {
+    top: 60%;
+    left: 62%;
+    width: 35vw;
   }
 
-  .gradient {
-    gap: 10vw;
+  /* ТЕЛЕФОН 414 x 896 */
+  @media (max-width: 480px) {
+    /*основные стили*/
+    h1 {
+      font-size: 19.32vw;
+    }
+    h2 {
+      font-size: 4.8vw;
+    }
+    h3 {
+      font-size: 4.34vw;
+    }
+    h4 {
+      font-size: 3.38vw;
+    }
+    .main {
+      height: 216vw;
+      .logos {
+        scale: calc(1.7);
+      }
+      .info {
+        font-size: 4.8vw;
+      }
+      .info::before {
+        -webkit-text-stroke: 2vw #fff;
+      }
+    }
+    .mainMenu {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4vw;
+      top: 6vw;
+      left: 8vw;
+      margin-top: 0;
+    }
+
+    .mainMenuLink {
+      font-size: 5vw;
+      text-align: left;
+    }
+
+    .mainMenuLink.active::after {
+      bottom: -1vw;
+      height: 0.4vw;
+    }
+
+    .gradient {
+      gap: 10vw;
+    }
+    .screen {
+      height: auto;
+      min-height: auto;
+      padding-left: 5vw;
+      padding-right: 5vw;
+      box-sizing: border-box;
+    }
+    .screen_1-1 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 18vw 6vw 16vw;
+      gap: 8vw;
+      box-sizing: border-box;
+    }
+
+    .quote1 {
+      width: 100%;
+      align-items: center;
+      gap: 1vw;
+    }
+
+    .slovo {
+      line-height: 1;
+      margin-top: 5vw;
+      text-align: center;
+    }
+
+    .quote2 {
+      width: 72vw;
+      margin-top: 5vw;
+      text-align: center;
+    }
+
+    .quote2 h3,
+    .quote2 p {
+      line-height: 1.05;
+      margin: 0;
+    }
+    .screen_1-2 {
+      height: 50vw;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    .cardsTrack {
+      gap: 5vw;
+      padding: 8vw 9vw 10vw;
+    }
+
+    .card {
+      width: 73.9vw;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      border-radius: 1vw;
+      height: 37.8vw;
+    }
+
+    .card.active {
+      transform: scale(1);
+      box-shadow:
+        0 0 4vw rgba(255, 255, 255, 0.4),
+        0 0 6vw rgba(255, 255, 255, 0.2);
+    }
+
+    .card img {
+      object-fit: contain;
+    }
+
+    /* третий экран главной стр */
+    .screen_1-3 {
+      padding: 14vw 0;
+      box-sizing: border-box;
+    }
+
+    .tovary {
+      flex-direction: column;
+      align-items: center;
+      gap: 10vw;
+      margin-top: 8vw;
+      margin-bottom: 8vw;
+    }
+
+    .tovar {
+      width: 70vw;
+      height: auto;
+      display: flex;
+      gap: 3vw;
+      text-align: center;
+    }
+
+    .tovar img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* последний экран главной стр */
+    .screen_1-4 {
+      flex-direction: column;
+      gap: 8vw;
+      padding: 14vw 7vw;
+      box-sizing: border-box;
+    }
+
+    .block-karty {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      gap: 5vw;
+    }
+
+    .karta {
+      width: 86vw;
+      height: 58vw;
+      border: 0.5vw solid #70d6d8;
+      border-radius: 2vw;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    .knopka {
+      width: 38vw;
+      height: auto;
+      padding: 2.2vw 4vw;
+      font-size: 2.6vw;
+      border-radius: 5vw;
+    }
+    /*о нас*/
+    #img2 {
+      top: 60%;
+      left: 7%;
+      width: 55vw;
+    }
+    #img3 {
+      top: 10%;
+      left: 50%;
+      width: 65vw;
+      z-index: 3;
+    }
+    .filosofia {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+    .filosofia h1 {
+      font-size: 15vw;
+    }
+    .opisanie-filosofii {
+      width: 82vw;
+    }
+    .banner-pervuy {
+      flex-direction: column;
+      align-items: center;
+      gap: 7vw;
+      width: 100%;
+    }
+
+    .banner-photo1 {
+      width: 86vw;
+      height: auto;
+      order: 1;
+    }
+
+    .block1 {
+      order: 2;
+      width: 86vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 4vw;
+    }
+
+    .info-block {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .info-block h2,
+    .info-block h3 {
+      text-align: center;
+      margin-bottom: 2vw;
+      line-height: 1.1;
+    }
+    /*АССОРТИМЕНТ*/
+    #img4 {
+      top: 30%;
+      left: 5%;
+      width: 45vw;
+      z-index: 0;
+    }
+    #img5 {
+      top: 65%;
+      left: 55%;
+      width: 40vw;
+      z-index: 3;
+    }
+    .screen_3-1 h1 {
+      font-size: 15vw;
+    }
+    .screen_3-1,
+    .screen_3-2 {
+      height: auto;
+      min-height: auto;
+      overflow: visible;
+      padding: 14vw 6vw;
+      box-sizing: border-box;
+      gap: 10vw;
+    }
+
+    .merch {
+      width: 86vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 7vw 4vw;
+    }
+
+    .tovary-merch {
+      order: 1;
+      width: 86vw;
+      height: auto;
+      gap: 2vw;
+    }
+
+    .tovary-merch-mini {
+      order: 2;
+      width: 41vw;
+      height: auto;
+      gap: 2vw;
+    }
+
+    .tovary-merch img,
+    .tovary-merch-mini img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .banner-photo3 {
+      width: 86vw;
+      height: auto;
+      margin-top: 0;
+    }
+    .screen_3-2 .knopka {
+      width: fit-content;
+      min-width: max-content;
+      height: auto;
+      padding: 3vw 6vw;
+      align-self: center;
+      white-space: nowrap;
+    }
+    /*журнал*/
+    .screen_6-1 h1 {
+      font-size: 15vw;
+    }
   }
-  .screen {
-    height: 216vw;
+
+  .banner-vtoroi > .info-block {
+    order: 2;
+    width: 45vw;
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .banner-vtoroi > .info-block h2,
+  .banner-vtoroi > .info-block h3 {
+    text-align: right;
+    margin: 0;
+  }
+
+  .banner-vtoroi > .info-block .contacts {
+    align-items: flex-end;
+    text-align: right;
+  }
+  .banner-vtoroi {
+    flex-direction: row;
+    gap: 1vw;
+    box-sizing: border-box;
+    margin-bottom: 6vw;
+  }
+  .banner-vtoroi .knopka {
+    height: 9vw !important;
+    min-height: 0 !important;
+    padding: 0 5vw !important;
+    margin-top: 10vw;
+  }
+  /*события*/
+  .posters-page {
+    padding: 12vw 0;
+  }
+
+  .scene {
+    gap: 12vw;
+  }
+
+  .poster-group,
+  .group1,
+  .group2,
+  .group3,
+  .group4,
+  .group5 {
+    width: 86vw;
+    height: 78vw;
+  }
+
+  .poster {
+    width: 34vw;
+  }
+
+  .group1 .poster1,
+  .group2 .poster4,
+  .group3 .poster7,
+  .group4 .poster10,
+  .group5 .poster13 {
+    left: 0;
+    top: 20vw;
+  }
+
+  .group1 .poster2,
+  .group2 .poster5,
+  .group3 .poster8,
+  .group4 .poster11,
+  .group5 .poster14 {
+    left: 26vw;
+    top: 6vw;
+  }
+
+  .group1 .poster3,
+  .group2 .poster6,
+  .group3 .poster9,
+  .group4 .poster12,
+  .group5 .poster15 {
+    left: 52vw;
+    top: 20vw;
+  }
+
+  .poster-group h2,
+  .group1 h2,
+  .group2 h2,
+  .group3 h2,
+  .group4 h2,
+  .group5 h2 {
+    width: 60vw;
+    left: 13vw;
+    top: 64vw;
+    text-align: center;
+  }
+  /*пространство*/
+  /* первый экран пространства */
+  .screen_5-1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8vw;
+    padding: 14vw 6vw;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .house-wrapper {
+    width: 86vw;
+    height: 74.5vw;
+  }
+
+  .house-wrapper::before {
+    inset: -5vw;
+    filter: blur(4vw);
+  }
+
+  .house-img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  .house-text {
+    width: 86vw;
+    text-align: center;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .house-text h2,
+  .house-text h3,
+  .house-text p {
+    margin: 0;
+  }
+
+  .house-zone,
+  .room-overlay {
+    right: auto;
+    bottom: auto;
+  }
+
+  .zone-1,
+  .room-1 {
+    width: 51.25vw;
+    height: 29vw;
+    top: 0;
+    left: 26.7vw;
+  }
+
+  .zone-2,
+  .room-2 {
+    left: 26.6vw;
+    top: 29vw;
+    width: 59.5vw;
+    height: 24.8vw;
+  }
+
+  .zone-3,
+  .room-3 {
+    left: 26.6vw;
+    top: 53.5vw;
+    width: 59.6vw;
+    height: 21vw;
+  }
+
+  .zone-4,
+  .room-4 {
+    left: 0;
+    top: 33.6vw;
+    width: 26.7vw;
+    height: 19.4vw;
+  }
+
+  .zone-5,
+  .room-5 {
+    left: 0;
+    top: 53.5vw;
+    width: 18.1vw;
+    height: 18.3vw;
+  }
+  #img1 {
+    top: 38%;
+    left: 83%;
+  }
+
+  /*пространство*/
+  #img6 {
+    top: 65%;
+    width: 35vw;
+    left: 57%;
+  }
+
+  /* второй экран пространства */
+  .screen_5-2 {
+    height: auto;
+    min-height: auto;
+    padding: 14vw 6vw;
+    box-sizing: border-box;
+    gap: 8vw;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  /* третий экран пространства */
+  .screen_5-3 {
+    height: auto;
+    min-height: auto;
+    padding: 14vw 6vw;
+    box-sizing: border-box;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  .travel-form {
+    width: 86vw;
+    height: auto;
+    min-height: 120vw;
+    padding: 8vw 5vw;
+    box-sizing: border-box;
+    border: 0.5vw solid #ff9bc8;
+    border-radius: 2vw;
+    gap: 5vw;
+    background-size: cover;
+  }
+
+  .travel-form h2,
+  .travel-form h3 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .form-input {
+    width: 72vw;
+    height: 10vw;
+    border: 0.5vw solid #ff9bc8;
+    border-radius: 1.5vw;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  .form-input:focus {
+    box-shadow: 0 0 3vw rgba(255, 255, 255, 0.7);
+  }
+
+  .travel-form .knopka {
+    width: fit-content;
+    min-width: max-content;
+    height: auto;
+    padding: 3vw 6vw;
+    white-space: nowrap;
+  }
+
+  .popup-content {
+    width: 76vw;
+    min-height: 34vw;
+    border: 0.5vw solid #ff9bc8;
+    border-radius: 3vw;
+    gap: 3vw;
+    padding: 6vw;
+    box-sizing: border-box;
+  }
+
+  .popup-content h2,
+  .popup-content p {
+    margin: 0;
+    text-align: center;
+  }
+  /* последняя страница — первый экран */
+  .screen_6-1 {
+    height: auto;
+    min-height: auto;
+    padding: 14vw 6vw;
+    box-sizing: border-box;
+    gap: 8vw;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  .screen_6-1 .cardsTrack {
+    width: 100%;
+    padding: 6vw 0;
+    gap: 5vw;
+  }
+
+  .screen_6-1 .card {
+    width: 86vw;
+    height: auto;
+    aspect-ratio: 52.5 / 37;
+    border-radius: 0;
+    flex-shrink: 0;
+  }
+
+  .screen_6-1 .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .screen_6-1 .knopka {
+    width: fit-content;
+    min-width: max-content;
+    height: auto;
+    padding: 3vw 6vw;
+    white-space: nowrap;
+    align-self: center;
+  }
+
+  /* последняя страница — второй экран */
+  .screen_6-2 {
+    height: auto;
+    min-height: auto;
+    padding: 16vw 6vw;
+    box-sizing: border-box;
+    gap: 10vw;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  .informacia {
+    width: 86vw;
+    gap: 6vw;
+    text-align: center;
+    align-items: center;
+  }
+
+  .informacia h1,
+  .informacia h2,
+  .informacia h3,
+  .informacia p {
+    margin: 0;
+  }
+
+  .informacia .knopka {
+    width: fit-content;
+    min-width: max-content;
+    height: auto;
+    padding: 3vw 6vw;
+    align-self: center;
+    white-space: nowrap;
+  }
+  .footer h4 {
+    font-size: 2vw;
+  }
+  .footer h3 {
+    font-size: 2vw;
+  }
+  #img7 {
+    top: 20%;
+    left: 40%;
+    width: 60vw;
+    z-index: 0;
+  }
+  #img8 {
+    top: 60%;
+    left: 45%;
+    width: 50vw;
   }
 }

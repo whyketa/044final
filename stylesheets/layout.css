@@ -62,9 +62,21 @@ h4 {
   background-color: #fdabca;
 
   padding: 1.3vw 5.2vw;
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 .knopka:active {
   background-color: #70d6d8;
+}
+.knopka:hover {
+  box-shadow:
+    0 0 1vw rgba(112, 214, 216, 0.8),
+    0 0 2vw rgba(253, 171, 202, 0.7),
+    0 0 3vw rgba(255, 255, 255, 0.45);
+  transform: scale(1.03);
 }
 
 /*меню*/
@@ -89,7 +101,7 @@ h4 {
   opacity: 0.7;
 }
 
-/*.mainMenuLink.active::after {
+.mainMenuLink.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -365,10 +377,8 @@ h4 {
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  pointer-events: none;
-  user-select: none;
 }
 
 /*третий экран главной стр*/
